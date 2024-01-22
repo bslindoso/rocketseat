@@ -2,9 +2,9 @@ body {
     margin: 0 auto;
     color: #828282;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
     font-size: 15px;
     line-height: 22px;
+    text-align: center;
 }
 
 h1 {
@@ -21,11 +21,11 @@ h1 span {
 
 #main {
     width: 626px;
-    margin: auto;
+    margin: 64px auto;
 }
 
-#main p {
-    text-align-last: justify;
+#main p {    
+    margin-bottom: 16px;
 }
 
 #main p span {
@@ -36,11 +36,15 @@ h1 span {
 #footer a {
     color: #3F3D56;
     text-decoration-line: none;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+#footer a + a {
+    margin-left: 42px;
 }
 
 .line {
-    margin: 0 auto;
+    margin: 0 auto 16px;
     width: 391px;
     height: 0;
     border: 1px solid #ECEFF2;
