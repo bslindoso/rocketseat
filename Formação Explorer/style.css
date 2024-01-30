@@ -1,0 +1,25 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+
+    margin: 0;
+}
+
+main h1 {
+    font-family: 'Sixtyfour', sans-serif;
+    text-align: center;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    
+    width: 80%;
+    margin: 15px auto;
+}
+
+.firstLetter {
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: 36px;
+    padding-left: 30px;
+}
