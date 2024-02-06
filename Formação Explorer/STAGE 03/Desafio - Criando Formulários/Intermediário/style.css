@@ -36,8 +36,8 @@ button {
 
 .page {
     margin: 140px auto;
-    max-width: 550px;
-    min-width: 600px;
+    max-width: 750px;
+    min-width: 500px;
     /* DEV border: 1px solid green; */
 }
 
