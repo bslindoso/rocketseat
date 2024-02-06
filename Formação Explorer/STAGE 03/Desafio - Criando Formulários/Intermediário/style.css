@@ -144,6 +144,10 @@ fieldset {
     outline: 2px solid #FF5374;
 }
 
+#schedule-1st-date, #schedule-2nd-date {
+    width: 300px;
+}
+
 .col-3 {
     display: flex;
     gap: 22px;
