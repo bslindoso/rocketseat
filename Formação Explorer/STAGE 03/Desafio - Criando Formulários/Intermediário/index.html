@@ -22,7 +22,7 @@
                 agendar a sua mentoria</p>
         </header>
 
-        <form action="#">
+        <form action="#" id="form">
             <fieldset>
                 <div class="fieldset-wrapper">
                     <legend>Informações pessoais</legend>
@@ -30,19 +30,87 @@
                     <div class="col-2">
                         <div class="input-wrapper">
                             <label for="personal-info-name">Nome</label>
-                            <input type="text" name="name" id="personal-info-name">
+                            <input type="text" name="name" id="personal-info-name" required>
                         </div>
 
                         <div class="input-wrapper">
                             <label for="personal-info-surname">Sobrenome</label>
-                            <input type="text" name="surname" id="personal-info-surname">
+                            <input type="text" name="surname" id="personal-info-surname" required>
                         </div>
                     </div>
-                    
+
+                    <div class="input-wrapper">
+                        <label for="personal-info-email">Email <span>(digite um email válido)</span></label>
+                        <input type="email" name="email" id="personal-info-email" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="personal-info-password">Senha <span>(mínimo de 6 caracteres)</span></label>
+                        <input type="password" name="password" id="personal-info-password" minlength="6" required>
+                    </div>
+
                 </div>
             </fieldset>
 
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>Informações do mentor</legend>
+                    <div class="input-wrapper">
+                        <label for="mentor-name">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                        <input type="text" name="mentor-name" id="mentor-name" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <legend>Seus horários disponíveis</legend>
+
+                    <div id="header-input-group">
+                        <h1>Primeira mentoria</h1>
+                        <div class="col-3">
+                            <div class="input-wrapper">
+                                <label for="schedule-1st-date">Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date" name="schedule-1st-date" id="schedule-1st-date" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="schedule-1st-start-time">Das</label>
+                                <input type="time" name="schedule-1st-start-time" id="schedule-1st-start-time" required>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="schedule-1st-end-time">Até</label>
+                                <input type="time" name="schedule-1st-end-time" id="schedule-1st-end-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="header-input-group">
+                        <h1>Segunda mentoria</h1>
+                        <div class="col-3">
+                            <div class="input-wrapper">
+                                <label for="schedule-2nd-date">Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date" name="schedule-2nd-date" id="schedule-2nd-date">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="schedule-2nd-start-time">Das</label>
+                                <input type="time" name="schedule-2nd-start-time" id="schedule-2nd-start-time">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="schedule-2nd-end-time">Até</label>
+                                <input type="time" name="schedule-2nd-end-time" id="schedule-2nd-end-time">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </form>
+        <footer>
+            <button form="form">Salvar</button>
+        </footer>
     </div>
 </body>
 
