@@ -29,7 +29,7 @@ body::before {
 }
 
 h1,
-legend, 
+legend,
 button {
     font-family: 'Staatliches', sans-serif;
 }
@@ -95,7 +95,7 @@ fieldset {
     border-bottom: 1px solid #E6E6F0;
 }
 
-.fieldset-wrapper > div:first-of-type {
+.fieldset-wrapper>div:first-of-type {
     margin-top: 20px;
 }
 
@@ -144,7 +144,8 @@ fieldset {
     outline: 2px solid #FF5374;
 }
 
-#schedule-1st-date, #schedule-2nd-date {
+#schedule-1st-date,
+#schedule-2nd-date {
     width: 300px;
 }
 
@@ -181,4 +182,5 @@ footer button {
 
 footer button:hover {
     background: #df395a;
+    cursor: pointer;
 }
