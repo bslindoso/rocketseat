@@ -27,7 +27,6 @@
     <form action="#" id="form">
 
       <fieldset>
-
         <div class="fieldset-wrapper">
 
           <div class="col-2">
@@ -55,20 +54,59 @@
         <div class="fieldset-wrapper">
           <legend>Informações do mentor</legend>
           <div class="line"></div>
-       
-            <div class="input-wrapper">
-              <label for="info-name">Nome</label>
-              <input type="text" name="info-name" id="info-name" required>
-            </div>
 
-            <div class="input-wrapper">
-              <label for="info-surname">Sobrenome</label>
-              <input type="text" name="info-surname" id="info-surname" required>
-            </div>
+          <div class="input-wrapper">
+            <label for="mentor-name">Selecione quem foi o seu mentor</label>
+            <select name="mentor-name" id="mentor-name" required>
+              <option value="" selected disabled hidden></option>
+              <option value="victor">Victor</option>
+              <option value="bruno">Bruno</option>
+              <option value="arnaldo">Arnaldo</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="mentor-feedback">Feedback sobre o mentor</label>
+            <textarea name="mentor-feedback" id="mentor-feedback"></textarea>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="no-doubts">
+            <label for="no-doubts">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+          </div>
 
         </div>
 
       </fieldset>
+
+      <fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Agendando próxima mentoria</legend>
+            <div class="line"></div>
+
+            <div class="col-3">
+              <div class="input-wrapper">
+                <label for="schedule-date">Data <span>(DD/MM/AAAA)</span></label>
+                <input type="date" name="schedule-date" id="schedule-date" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="schedule-start-time">Das</label>
+                <input type="time" name="schedule-start-time" id="schedule-start-time" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="schedule-end-time">Até</label>
+                <input type="time" name="schedule-end-time" id="schedule-end-time" required>
+              </div>
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <button>Salvar</button>
 
     </form>
   </div>
