@@ -85,3 +85,29 @@ ul li span {
   letter-spacing: -2px;
 
 }
+
+ul li + li {
+  margin-top: 3.2rem;
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  body {
+    margin: 8rem;
+  }
+  main {
+    max-width: 1021px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+  }
+}
