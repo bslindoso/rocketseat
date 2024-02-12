@@ -16,7 +16,7 @@ body {
   color: #A54328;
   background-image: url('./assets/bg1.jpg');
   background-size: cover; /* para cobrir todo o elemento */
-  background-repeat: no-repeat; /* para evitar a repetição da imagem */
+  background-repeat: repeat; /* para evitar a repetição da imagem */
 }
 
 main {
