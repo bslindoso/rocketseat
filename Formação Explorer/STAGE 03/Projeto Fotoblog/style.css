@@ -8,13 +8,18 @@
 
 :root {
   font-size: 62.5%;
-  font-family: "Mulish", sans-serif;
   font-weight: 400;
 
   --color-base-white: #FFFFFF;
   --color-base-grey-100: #F5F5F5;
   --color-base-grey-300: #8D8D99;
+  --color-base-grey-500: #3D3D3D;
   --color-base-grey-900: #202024;
+  --color-base-black: #000000;
+}
+
+html, body, input {
+  font-family: "Mulish", sans-serif;
 }
 
 body {
@@ -49,6 +54,7 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 7.2rem;
+  font-weight: 600;
 }
 
 header form {
@@ -58,7 +64,8 @@ header form {
 nav ul {
   list-style: none;
   font-size: 1.8rem;
-  color: var(--color-base-grey-300)
+  color: var(--color-base-grey-300);
+  font-weight: 700;
 }
 
 ul li.active {
@@ -70,7 +77,104 @@ ul li:hover {
   cursor: pointer;
 }
 
-ul li:not(.active):hover {
+/* ul li:not(.active):hover {
+  font-weight: 700;
+} */
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--color-base-grey-100);
+  border: 0;
+  border-radius: .6rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
+.input-wrapper input::placeholder {
+  color: var(--color-base-grey-500);
+  opacity: 0.56;
+}
+
+.input-wrapper input:focus {
+  outline: 1px solid var(--color-base-grey-300);
+  /* outline: none; */
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+/* ====================
+  START: Galeria 
+  ===================== */
+main h1 {
+  padding-top: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.gallery {
+  margin-top: 3.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+
+}
+
+.item {
+  background-color: var(--color-base-white);
+  border-radius: .8rem;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.details {
+  padding: 2.2rem;  
+}
+
+.details h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  padding: .6rem;
+  background-color: var(--color-base-grey-100);
+  border-radius: .4rem;
+  line-height: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* ====================
+  END: Galeria 
+  ===================== */
+
+footer p {
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+}
