@@ -55,3 +55,22 @@ header form {
   flex: 1;
 }
 
+nav ul {
+  list-style: none;
+  font-size: 1.8rem;
+  color: var(--color-base-grey-300)
+}
+
+ul li.active {
+  color: var(--color-base-grey-900);
+}
+
+ul li:hover {
+  color: var(--color-base-grey-900);
+  cursor: pointer;
+}
+
+ul li:not(.active):hover {
+  font-weight: 600;
+}
+
