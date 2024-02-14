@@ -8,6 +8,8 @@
 
 :root {
   font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
 
   --color-base-white: #FFFFFF;
   --color-base-grey-100: #F5F5F5;
@@ -41,5 +43,15 @@ main {
   background-color: var(--color-base-grey-100);
 }
 
-/*  */
+header,
+nav, 
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+}
+
+header form {
+  flex: 1;
+}
 
