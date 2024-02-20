@@ -6,16 +6,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-base-grey-300);
+}
+
+
+
 :root {
   font-size: 62.5%;
   font-weight: 400;
 
-  --color-base-white: #FFFFFF;
-  --color-base-grey-100: #F5F5F5;
-  --color-base-grey-300: #8D8D99;
-  --color-base-grey-500: #3D3D3D;
-  --color-base-grey-900: #202024;
-  --color-base-black: #000000;
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-grey-100: hsl(0, 0%, 96%);
+  --color-base-grey-300: hsl(240, 6%, 58%);
+  --color-base-grey-500: hsl(0, 0%, 24%);
+  --color-base-grey-900: hsl(240, 6%, 13%);
+  --color-base-black: hsl(0, 0%, 0%);
 }
 
 html, body, input {
@@ -68,18 +75,14 @@ nav ul {
   font-weight: 700;
 }
 
-ul li.active {
+ul li.active a {
   color: var(--color-base-grey-900);
 }
 
-ul li:hover {
+ul li a:hover {
   color: var(--color-base-grey-900);
   cursor: pointer;
 }
-
-/* ul li:not(.active):hover {
-  font-weight: 700;
-} */
 
 .input-wrapper label {
   width: 1px;
@@ -148,12 +151,13 @@ main h1 {
   object-fit: cover;
 
   transition: all 200ms ease-out;
-
+  display: block;
 }
 
 .item img:hover {
   filter: hue-rotate(7deg) contrast(101%) saturate(200%);
   transform: scale(1.1) rotate(-2deg);
+  cursor: pointer;
 }
 
 .details {
@@ -188,4 +192,38 @@ footer p {
   text-align: center;
   padding: 1.6rem;
   font-weight: 600;
+}
+
+/* Animações */
+
+header {
+  --startY: -100%;
+  animation: move .2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move .2s alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
