@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chat</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!-- TOP -->
+    <header id="top">
+      <div id="user-info">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Retrato de Cecilia Sassaki, uma mulher branca com cabelos castanhos e um 
+          sorriso radiante no rosto.">
+
+        <div id="user-status">
+          <strong>Cecilia Sassaki</strong>
+          <div class="status">
+            Online
+          </div>
+        </div>
+      </div>
+
+      <button id="close-chat">
+        <i class="ph ph-x"></i>
+      </button>
+    </header>
+
+
+    <!-- MESSAGES -->
+    <main id="message-container">
+      <div id="last-seen">Hoje 11:30</div>
+
+      <ul class="messages">
+        <li class="message">
+          <div class="message-sent-time">Cecilia - 11:30</div>
+          <div class="message-content">Tive uma ideia incrível para um projeto! 😍</div>
+        </li>
+
+        <li class="message you">
+          <div class="message-sent-time">Você - 11:32</div>
+          <div class="message-content">Sério? Me conta mais.</div>
+        </li>
+
+        <li class="message">
+          <div class="message-sent-time">Cecilia - 11:34</div>
+          <div class="message-content">E se a gente fizesse um chat moderno e responsivo
+            em apenas uma semana?</div>
+        </li>
+
+        <li class="message">          
+          <div class="message-content">Imagina só, com emojis personalizados e integração com GIFs! 🎉</div>
+        </li>
+
+        <li class="message you">
+          <div class="message-sent-time">Você - 11:40</div>
+          <div class="message-content">Adorei! Vai deixar o chat super divertido. Como começamos?</div>
+        </li>
+
+        <li class="message">
+          <div class="message-sent-time">Cecilia - 11:45</div>
+          <div class="message-content">Podemos usar tecnologias como React e Node.js para agilizar o desenvolvimento.
+          </div>
+        </li>
+
+        <li class="message you">
+          <div class="message-sent-time">Você - 11:46</div>
+          <div class="message-content">Boa escolha! Vamos dividir as tarefas para otimizar o tempo. Você prefere
+            trabalhar no front-end ou back-end?</div>
+        </li>
+
+        <li class="message">
+          <div class="message-sent-time">Cecilia - 11:50</div>
+          <div class="message-content">Gosto mais de trabalhar no front-end. Posso começar a esboçar o design enquanto
+            você configura o ambiente no back-end?</div>
+        </li>
+
+        <li class="message you">
+          <div class="message-sent-time">Você - 11:51</div>
+          <div class="message-content">Perfeito! Vou configurar o ambiente com Node.js e express. Enquanto isso, vou
+            pensar em recursos interessantes para implementarmos.</div>
+        </li>
+
+        <li class="message">
+          <div class="message-sent-time">Cecilia - 11:52</div>
+          <div class="message-content">Que tal adicionarmos uma funcionalidade de reações aos comentários? Seria legal
+            ter mais interatividade.</div>
+        </li>
+
+        <li class="message you">
+          <div class="message-sent-time">Você - 11:52</div>
+          <div class="message-content">Boa ideia! Podemos usar emojis para reações. Já estou ansioso para ver como vai
+            ficar.</div>
+        </li>
+
+        <li class="message you">          
+          <div class="message-content"><strong>#boraCodar! 🚀</strong></div>
+        </li>
+
+      </ul>
+
+    </main>
+
+
+    <!-- BOTTOM -->
+    <footer id="bottom">
+      <form id="send-message">
+        <input type="text" placeholder="Digite sua mensagem">
+        <button type="submit">
+          <i class="ph-fill ph-paper-plane-right"></i>
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <script>
+    const messages = document.querySelector('.messages');
+    messages.lastElementChild.scrollIntoView()
+  </script>
+
+</body>
+
+</html>

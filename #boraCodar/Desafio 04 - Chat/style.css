@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: calc(62.5% / 10);
+
+  --color-Eerie-Black: #1A1924;
+  --color-Platinum-White: #E1E1E6;
+  --color-Munsell-Green: #00B37E;
+  --color-Plump-Purple: #633BBC;
+  --color-Teal-Green: #07847E;
+  --color-Yankees-Blue: #282843;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16rem;
+  font-weight: 400;
+  color: var(--color-Platinum-White);
+
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: var(--color-Eerie-Black);
+}
+
+/*================
+  APP CONTAINER
+  ================*/
+#app {
+  padding: 24rem 32rem;
+  margin: auto;
+
+  height: 100vh;
+  max-width: 880rem;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+}
+
+/*================
+  HEADER #TOP
+  ================*/
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* USER INFO */
+#user-info {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+
+#user-info img {
+  width: 48rem;
+  height: 48rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* USER STATUS */
+#user-status strong {
+  font-size: 16rem;
+}
+
+#user-status .status::before {
+  content: '';
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  background-color: var(--color-Munsell-Green);
+  border-radius: 50%;
+}
+
+#user-status .status {
+  color: var(--color-Munsell-Green);
+  display: flex;
+  align-items: baseline;
+  gap: 4rem;
+
+  margin-top: 4rem;
+  font-size: 12rem;
+}
+
+/*================
+  MAIN #MESSAGE CONTAINER
+  ================*/
+#message-container {
+  padding-bottom: 30rem;
+  overflow-y: scroll;
+}
+
+#message-container::-webkit-scrollbar {
+  display: none;
+}
+
+#last-seen {
+  margin-top: 26rem;
+
+  font-size: 12rem;
+  line-height: 14rem;
+
+  text-align: center;
+}
+
+ul.messages {
+  margin-top: 30rem;
+
+  list-style: none;
+
+  display: grid;
+  gap: 30rem;
+
+}
+
+.message {
+  font-size: 12rem;
+  line-height: 14rem;
+}
+
+.message:not(.you) {
+  width: 60vw;
+}
+
+.message .message-content {
+  margin-top: 10rem;
+  padding: 14rem;
+  background: var(--color-Plump-Purple);
+  border-radius: 0 8rem 8rem 8rem;
+  max-width: fit-content;
+}
+
+.message.you {
+  margin-left: auto;
+  max-width: 60vw;
+
+}
+
+.message.you .message-sent-time {
+  text-align: right;
+}
+
+.message.you .message-content {
+  background: var(--color-Teal-Green);
+  border-radius: 8rem 8rem 0 8rem;
+
+  text-align: right;
+
+}
+
+
+/*================
+  FOOTER #BOTTOM
+  ================*/
+
+footer#bottom {
+  padding-top: 24rem;
+  padding-bottom: 24rem;
+}
+
+form#send-message {
+  padding: 14rem 24rem;
+
+  display: flex;
+  align-items: center;
+  background-color: var(--color-Yankees-Blue);
+  border-radius: 999rem;
+
+}
+
+form input {
+  flex: 1;
+  color: var(--color-Platinum-White);
+  font-size: 12rem;
+  line-height: 14rem;
+  outline: none;
+}
+
+form input::placeholder {
+  color: var(--color-Platinum-White);
+}
+
+form:focus-within {
+  outline: 2px solid var(--color-Platinum-White);
+}
+
+form button i {
+  color: var(--color-Platinum-White);
+  font-size: 24rem;
+}
+
+input,
+button {
+  background: transparent;
+  border: 0;
+  color: var(--color-Platinum-White);
+}
+
+
+
+/*================
+  SCREEN 880px
+  ================*/
+
+@media (min-width: 880px) {
+  .message:not(.you) {
+    width: 100%;
+  }
+}
