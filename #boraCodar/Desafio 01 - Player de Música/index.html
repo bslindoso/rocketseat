@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player de música</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <div id="player">
+    <div class="player-wrapper">
+      <img src="./assets/cover.svg" alt="Capa da música que está tocando" id="cover">
+
+      <div class="music-info">
+        <h1 id="music-name">Acorda Devinho</h1>
+        <h2 id="artist-name">Banda Rocketseat</h2>
+      </div>
+
+      <div class="player-buttons">
+        <button id="rewind"><span class="ph-fill ph-rewind"></span></button>
+        <button id="play-pause"><span class="ph-fill ph-pause"></span></button>
+        <button id="fast-forward"><span class="ph-fill ph-fast-forward"></span></button>
+      </div>
+
+      <div class="player-progress-bar">
+        <div id="progress-bar-container">
+          <div id="progress-bar"></div>
+        </div>
+        <div class="time-wrapper">
+          <time id="total-time" datetime="PT3M20S">0:13</time>
+          <time id="remaining-time" datetime="PT3M20S">0:13</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+
+</html>
