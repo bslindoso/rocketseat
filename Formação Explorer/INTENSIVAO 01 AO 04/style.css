@@ -1,3 +1,4 @@
+/* RESETS */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,16 @@ button {
   border: none;
 }
 
+input,
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+fieldset {
+  border: none;
+}
+
+/* CONFIG */
 :root {
   font-size: calc(62.5% / 10);
   font-family: "Mulish", sans-serif;
@@ -23,6 +34,11 @@ button {
 
 }
 
+/* STYLES */
 body {
   font-size: 16rem;
+}
+
+header {
+  background: var(--color-Magnolia-White);
 }
