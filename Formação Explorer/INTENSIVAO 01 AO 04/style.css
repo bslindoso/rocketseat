@@ -13,7 +13,8 @@ button {
 }
 
 input,
-button {
+button,
+textarea {
   font-family: "Mulish", sans-serif;
 }
 
@@ -40,5 +41,269 @@ body {
 }
 
 header {
+  padding: 0 34rem 93rem 34rem;
   background: var(--color-Magnolia-White);
+}
+
+header>img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 17rem;
+  max-width: 100%;
+  height: auto;
+}
+
+header h1 {
+  color: var(--color-Fandango-Pink);
+  text-align: center;
+  font-size: 32rem;
+  font-weight: 900;
+}
+
+header p {
+  color: var(--color-Deep-Koamaru-Blue);
+  text-align: center;
+  font-size: 20rem;
+  font-weight: 600;
+
+  margin-bottom: 35rem;
+}
+
+header button {
+  display: block;
+  margin: 0 auto;
+
+  cursor: pointer;
+}
+
+section {
+  background: var(--color-BG-Blue);
+  padding: 64rem 34rem;
+}
+
+section .square-wrapper {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  margin: auto;
+  gap: 48rem;
+
+}
+
+section .square {
+  background: var(--color-Magnolia-White);
+
+  margin: auto;
+  padding: 26rem;
+  max-width: 360rem;
+  height: 350rem;
+
+  border-radius: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32rem;
+}
+
+.square>img {
+  width: 80rem;
+}
+
+.square-text {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  margin-bottom: 20rem;
+}
+
+.square-text h2 {
+  color: var(--color-Fandango-Pink);
+  font-size: 30rem;
+  font-weight: 900;
+}
+
+.square-text p {
+  color: var(--color-Deep-Koamaru-Blue);
+  font-weight: 600;
+}
+
+form {
+  background: var(--color-Magnolia-White);
+  padding: 72rem 40rem;
+
+}
+
+fieldset h2 {
+  color: var(--color-Fandango-Pink);
+  font-size: 32rem;
+  font-weight: 900;
+  margin-bottom: 43rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.input-wrapper input {
+  padding: 12rem 14rem 12rem 50rem;
+}
+
+textarea {
+  padding: 12rem 14rem;
+  height: 98rem;
+}
+
+.input-wrapper input,
+textarea {
+  width: 100%;
+  background-color: var(--color-Magnolia-White);
+  border: 1.5px solid var(--color-Deep-Koamaru-Blue);
+  border-radius: 16rem;
+
+  font-size: 16rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder,
+textarea::placeholder {
+  color: var(--color-Deep-Koamaru-Blue);
+  font-size: 16rem;
+  font-weight: 600;
+}
+
+.input-wrapper input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-Deep-Koamaru-Blue);
+  border: none;
+}
+
+fieldset>button {
+  background: var(--color-BG-Blue);
+  color: var(--color-White);
+
+  width: 150rem;
+  padding: 16rem;
+  border-radius: 16rem;
+}
+
+form>img {
+  display: none;
+}
+
+footer {
+  background: var(--color-BG-Blue);
+  color: var(--color-White);
+  font-size: 20rem;
+  text-align: center;
+  font-weight: 600;
+
+  padding: 32rem 16rem;
+}
+
+/* ================== */
+/* MEDIA QUERY */
+
+@media(max-width: 400px) {
+  section .square {
+    height: auto;
+  }
+}
+
+@media(min-width: 1024px) {
+
+  section .square-wrapper {
+    flex-direction: row;
+  }
+
+  section .square {
+    max-width: 366rem;
+    height: 420rem;
+  }
+
+  .square-text {
+    max-width: 100%;
+  }
+}
+
+@media(min-width: 1260px) {
+  header {
+    padding: 0 30rem 103rem 110rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  header .header-text-wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .header-text-wrapper h1 {
+    font-size: 55rem;
+  }
+
+  .header-text-wrapper p {
+    font-size: 32rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-text-wrapper button {
+    position: absolute;
+    bottom: 130rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  section {
+    gap: 50rem;
+    padding: 64rem 103rem;
+  }
+
+  section .square-wrapper {
+    max-width: 1250rem;
+  }
+
+  .square>img {
+    width: 97rem;
+  }
+
+  form {
+    display: flex;
+    gap: 80rem;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  fieldset {
+    margin: auto;
+    width: 1000rem;
+    padding: 90rem 0 90rem 103rem;
+  }
+
+  fieldset h2 {
+    margin: 0;
+  }
+
+  form>img {
+    display: block;
+    /* width: 40vw; */
+    max-width: 600rem;
+  }
 }
