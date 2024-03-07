@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+:root {
+  font-size: calc(62.5% / 10);
+  font-family: "Mulish", sans-serif;
+
+  --color-White: #FFFFFF;
+  --color-Magnolia-White: #F9F4FB;
+  --color-Fandango-Pink: #B52184;
+  --color-Deep-Koamaru-Blue: #312D64;
+  --color-BG-Blue: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+
+}
+
+body {
+  font-size: 16rem;
+}
