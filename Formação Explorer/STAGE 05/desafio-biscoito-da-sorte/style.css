@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+}
+
+:root {
+  font-size: calc(62.5% / 10);
+  --color-Black: #000000;
+  --color-Jacarta-Blue: #34355B;
+  --color-Vivid-Gamboge-Orange: #FF9500;
+  --color-Bright-Gray: #E4EDF1;
+  --color-White: #FFFFFF;
+}
+
+body {
+  font-size: 16rem;
+  font-family: "DM Sans", sans-serif;
+  height: 100vh;
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+
+  display: grid;
+  place-items: center;
+
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+main {
+  background-color: var(--color-White);
+  width: min(428rem, 90%);
+  margin-top: 120rem;
+  padding: 48rem 64rem 64rem;
+
+  border-radius: 5rem;
+  box-shadow: 0 20rem 50rem 0 rgba(0, 0, 0, 0.80);
+}
+
+main>div {
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: var(--color-Jacarta-Blue);
+  font-weight: 700;
+  font-size: 24rem;
+
+  margin-bottom: 15rem;
+}
+
+p {
+  color: var(--color-Jacarta-Blue);
+  font-weight: normal;
+  font-size: 15rem;
+  text-align: center;
+
+  margin-bottom: 20rem;
+}
+
+button>img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+button>img:hover {
+  animation: shake 0.2s infinite;
+}
+
+q {
+  quotes: none;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  display: inline-block;
+  font-size: 24rem;
+  font-weight: 400;
+
+  padding: 10rem;
+  background-color: var(--color-Bright-Gray);
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+
+  margin-bottom: 60rem;
+}
+
+.opened-cookie img {
+  margin-bottom: 60rem;
+  width: 100%;
+  min-width: 150rem;
+}
+
+.opened-cookie button {
+  background-color: var(--color-Vivid-Gamboge-Orange);
+  color: var(--color-White);
+  font-size: 15rem;
+  font-weight: 700;
+
+  padding: 16rem;
+
+  border-radius: 4rem;
+}
+
+.opened-cookie button:hover {
+  background-color: #ee8e08;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-5px, -5px);
+  }
+
+  50% {
+    transform: translate(5px, 5px);
+  }
+
+  75% {
+    transform: translate(-5px, 5px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
