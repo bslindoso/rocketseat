@@ -92,6 +92,9 @@ q {
   box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
 
   margin-bottom: 60rem;
+
+  animation-name: toFadeIn;
+  animation-duration: 2s;
 }
 
 .opened-cookie img {
@@ -150,5 +153,18 @@ q {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes toFadeIn {
+  0% {
+    transform:
+      translateY(150px) scale(0.1);
+
+  }
+
+  100% {
+    transform:
+      translateY(0px) scale(1);
   }
 }
