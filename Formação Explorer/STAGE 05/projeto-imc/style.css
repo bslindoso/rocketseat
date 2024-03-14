@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-Black: #000;
+  --color-Rich-Black-Dark: #040924;
+  --color-Rich-Black-Blue: #0C3440;
+  --color-Rich-Black-Green: #00453A;
+  --color-CG-Blue: #02799D;
+  --color-Coral-Red: #F03E3E;
+  --color-Platinum: #DCE2E9;
+  --color-White: #FFF;
+  --color-Dark-Gunmetal: #212529;
+  --color-border-input: rgba(73, 80, 87, 0.3);
+  --color-placeholder-input: rgba(73, 80, 87, 0.5);
+}
+
+body,
+input, 
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-Rich-Black-Dark);
+  font-weight: normal;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.card {
+  padding: 4.8rem 6.4rem 6.4rem;
+  background: var(--color-White);
+  max-width: 42.8rem;
+  margin-inline: auto;
+  
+  box-shadow: 0 .2rem .4rem rgba(0,0,0, 0.1);
+  border-radius: .6rem;
+}
+
+
+.animate-element {
+  animation: showCard 1.5s forwards ease-in-out;
+}
+
+@keyframes showCard {
+  0% {
+    transform: translateY(-100vh);
+  }
+  70% {
+    transform: translateY(10rem);
+  }
+  100% {
+    
+    transform: translateY(0);
+  }
+}
