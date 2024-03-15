@@ -9,6 +9,7 @@
 button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 :root {
@@ -27,13 +28,14 @@ button {
 }
 
 body,
-input, 
+input,
 button {
   font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 body {
-  font-size: 1.6rem;
   background-color: var(--color-Rich-Black-Dark);
   font-weight: normal;
 }
@@ -42,6 +44,8 @@ body {
   display: grid;
   height: 100vh;
   place-content: center;
+
+  padding: 1.6rem;
 }
 
 .card {
@@ -49,11 +53,82 @@ body {
   background: var(--color-White);
   max-width: 42.8rem;
   margin-inline: auto;
-  
-  box-shadow: 0 .2rem .4rem rgba(0,0,0, 0.1);
+
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
   border-radius: .6rem;
 }
 
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--color-Rich-Black-Blue);
+}
+
+form {
+  width: 30rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid var(--color-border-input);
+  background-color: var(--color-Platinum);
+  padding: 1.6rem;
+  border-radius: .4rem;
+}
+
+form input:focus {
+  outline: 2px solid var(--color-CG-Blue);
+}
+
+form input::placeholder {
+  color: var(--color-placeholder-input)
+}
+
+form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--color-Dark-Gunmetal);
+  margin-bottom: .8rem;
+  display: block;
+}
+
+form button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+
+  background-color: var(--color-CG-Blue);
+  color: var(--color-White);
+  border-radius: .4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  font-weight: 700;
+  transition: background .3s;
+}
+
+form button:hover {
+  background-color: #064c61;
+}
+
+#speechTitle {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(4rem);
+  color: var(--color-Rich-Black-Green);
+}
+
+.input-wrapper+.input-wrapper {
+  margin-top: 1.6rem;
+}
 
 .animate-element {
   animation: showCard 1.5s forwards ease-in-out;
@@ -63,11 +138,73 @@ body {
   0% {
     transform: translateY(-100vh);
   }
+
   70% {
     transform: translateY(10rem);
   }
+
   100% {
-    
+
     transform: translateY(0);
   }
+}
+
+/* modal */
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  /* o mesmo que top, bottom, left e right : 0*/
+  background: rgba(0, 0, 0, 0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal>button {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  transition: transform .3s;
+}
+
+.modal>button:hover {
+  transform: scale(1.1);
+}
+
+/* Alert Error */
+.alert-error {
+  position: absolute;
+  background-color: var(--color-Coral-Red);
+  color: var(--color-White);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: .8rem 0;
+  font-weight: 700;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: transform .5s;
+
+  z-index: 1;
+}
+
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
