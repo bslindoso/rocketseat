@@ -123,7 +123,12 @@ form button:hover {
   width: 4rem;
   height: 4rem;
   transform: translateY(4rem);
+  transition: transform .3s;
   color: var(--color-Rich-Black-Green);
+}
+
+#speechTitle:hover{
+  transform: translateY(4rem) scale(1.2);
 }
 
 .input-wrapper+.input-wrapper {
@@ -172,15 +177,28 @@ form button:hover {
   position: relative;
 }
 
-.modal>button {
+.modal>button:not(#speechResult) {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
   transition: transform .3s;
 }
 
-.modal>button:hover {
+.modal>button:hover:not(#speechResult) {
   transform: scale(1.1);
+}
+
+.modal #speechResult {
+  font-size: 2rem;
+
+  left: 1.6rem;
+  position: absolute;
+  top: 1.6rem;  
+  transition: transform .3s;
+}
+
+.modal #speechResult:hover {
+  transform: scale(1.2);
 }
 
 /* Alert Error */
