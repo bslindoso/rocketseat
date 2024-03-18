@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: calc(62.5% / 10);
+
+  --color-bg-body: hsla(0, 0%, 100%, 1);
+  --color-timer-font: hsla(240, 6%, 21%, 1);
+  --color-controls-font: hsla(240, 6%, 21%, 1);
+  --color-active-sound-bg: hsla(194, 97%, 31%, 1);
+  --color-active-sound-font: hsla(0, 0%, 100%, 1);
+  --color-disabled-sound-bg: hsla(240, 9%, 89%, 1);
+  --color-disabled-sound-font: hsla(240, 6%, 21%, 1);
+}
+
+html.dark {
+  --color-bg-body: hsla(240, 6%, 21%, 1);
+  --color-timer-font: hsla(0, 0%, 100%, 1);
+  --color-controls-font: hsla(0, 0%, 100%, 1);
+  --color-active-sound-bg: hsla(194, 97%, 31%, 1);
+  --color-active-sound-font: hsla(0, 0%, 100%, 1);
+  --color-disabled-sound-bg: hsla(0, 0%, 100%, 1);
+  --color-disabled-sound-font: hsla(240, 6%, 21%, 1);
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+
+body,
+input,
+button {
+  background: var(--color-bg-body);
+  color: var(--color-timer-font);
+}
+
+/* #controls button {
+
+} */ 
+
+body {
+  font-size: 16rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+#toggle-mode {
+  position: absolute;
+  right: 32rem;
+  top: 32rem;
+  font-size: 32rem;
+  line-height: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+#timer {
+  font-size: 126rem;
+}
+
+#content button {
+  font-size: 32rem;
+}
