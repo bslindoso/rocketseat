@@ -41,15 +41,9 @@ button {
   color: var(--color-timer-font);
 }
 
-/* #controls button {
-
-} */ 
-
 body {
-  font-size: 16rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-
   display: grid;
   height: 100vh;
   place-content: center;
@@ -66,8 +60,15 @@ body {
 button {
   background: transparent;
   border: none;
-
   cursor: pointer;
+}
+
+button:not(#theme>button) {
+  transition: transform .3s;
+}
+
+button:not(#theme>button):hover {
+  transform: scale(110%);
 }
 
 .sr-only {
@@ -82,10 +83,94 @@ button {
   appearance: none;
 }
 
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 100rem;
+}
+
 #timer {
   font-size: 126rem;
 }
 
-#content button {
-  font-size: 32rem;
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#controls button svg path {
+  fill: var(--color-controls-font)
+}
+
+#controls button {
+  font-size: 48rem;
+}
+
+#themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32rem;
+}
+
+#themes button {
+  width: 138rem;
+  height: 152rem;
+  border-radius: 24rem;
+  background-color: var(--color-disabled-sound-bg);
+  transition: transform .3s;
+}
+
+#themes button:hover {
+  transform: scale(105%);
+}
+
+#themes button.active {
+  background-color: var(--color-active-sound-bg);
+}
+
+#themes button.active svg path {
+  fill: var(--color-active-sound-font);
+}
+
+/* MEDIAS QUERIES */
+
+@media (max-width: 800px) {
+  #content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  #toggle-mode {
+    right: 15rem;
+    top: 15rem;
+    font-size: 25rem;
+  }
+
+  #content {
+    gap: 40rem;
+  }
+
+  #timer {
+    font-size: 80rem;
+  }
+
+  #themes {
+    gap: 20rem;
+  }
+
+  #controls button {
+    width: 35rem;
+  }
+
+  #controls svg {
+    width: 100%;
+  }
+
+  #themes button {
+    width: 95rem;
+    height: 100rem;
+    border-radius: 16rem;
+  }
 }
