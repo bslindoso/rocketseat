@@ -63,11 +63,11 @@ button {
   cursor: pointer;
 }
 
-button:not(#theme>button) {
-  transition: transform .3s;
+button:not(#themes>button) {
+  transition: transform .3s ease;
 }
 
-button:not(#theme>button):hover {
+button:not(#themes>button):hover {
   transform: scale(110%);
 }
 
@@ -118,7 +118,7 @@ button:not(#theme>button):hover {
   height: 152rem;
   border-radius: 24rem;
   background-color: var(--color-disabled-sound-bg);
-  transition: transform .3s;
+  transition: transform .5s ease;
 }
 
 #themes button:hover {
